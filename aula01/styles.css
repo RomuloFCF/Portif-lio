@@ -1,0 +1,22 @@
+body{
+    font-family: arial, helvetica, sans-serif;
+    text-align:center;
+    background-color: #000000;
+    color:rgb(255, 255, 255)
+
+}
+h1{
+    font-family: arial, helvetica, sans-serif;
+    text-align: center;
+
+    color: rgb(0, 255, 204);
+}
+#profissao {
+    font-family: 'Times New Roman', Helvetica, sans-serif;
+    text-align: center;
+}
+
+#sobre {
+    font-family: 'Times New Roman', Helvetica, sans-serif;
+    text-align: center;
+}

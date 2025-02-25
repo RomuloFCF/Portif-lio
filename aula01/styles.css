@@ -1,22 +1,81 @@
-body{
-    font-family: arial, helvetica, sans-serif;
-    text-align:center;
-    background-color: #000000;
-    color:rgb(255, 255, 255)
-
+/* Geral */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    color: #333;
 }
-h1{
-    font-family: arial, helvetica, sans-serif;
+
+/* Título */
+#titulo {
     text-align: center;
-
-    color: rgb(0, 255, 204);
+    margin-top: 50px;
 }
+
+#titulo h1 {
+    font-size: 36px;
+    color: #4CAF50;
+}
+
+/* Profissão */
 #profissao {
-    font-family: 'Times New Roman', Helvetica, sans-serif;
     text-align: center;
+    font-size: 20px;
+    margin-top: 20px;
 }
 
+/* Sobre mim */
 #sobre {
-    font-family: 'Times New Roman', Helvetica, sans-serif;
+    margin-top: 20px;
     text-align: center;
+    font-size: 16px;
+}
+
+#sobre h1 {
+    font-size: 30px;
+    color: #4CAF50;
+}
+
+#sobre p {
+    margin: 10px 0;
+}
+
+/* Redes sociais */
+#sociais {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaçamento entre os ícones */
+    margin-top: 35px;
+}
+
+#sociais a img {
+    width: 100px;
+    height:auto;
+    transition: transform 0.5s;
+}
+
+#sociais a img:hover {
+    transform: scale(1.2);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    #titulo h1 {
+        font-size: 28px;
+    }
+
+    #profissao p,
+    #sobre p {
+        font-size: 16px;
+    }
+
+    #sociais {
+        flex-direction: column;
+        gap: 2px;
+    }
+
+    #sociais a img {
+        width: 100px;
+    }
 }

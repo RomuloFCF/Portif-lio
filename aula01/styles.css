@@ -5,12 +5,15 @@ body {
     padding: 0;
     background-color: #f4f4f4;
     color: #333;
+    overflow-x: hidden; /* Evita rolagem horizontal */
 }
 
 /* Título */
 #titulo {
     text-align: center;
     margin-top: 50px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s forwards 0.5s; /* Animação de fade-in */
 }
 
 #titulo h1 {
@@ -23,13 +26,19 @@ body {
     text-align: center;
     font-size: 20px;
     margin-top: 20px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s forwards 1s; /* Animação de fade-in */
 }
 
 /* Sobre mim */
 #sobre {
-    margin-top: 20px;
+    background-color: #f4f4f4;
+    border-left: 5px solid #5ff68c;
+    padding-left: 15px;
     text-align: center;
     font-size: 16px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s forwards 1.5s; /* Animação de fade-in */
 }
 
 #sobre h1 {
@@ -45,18 +54,21 @@ body {
 #sociais {
     display: flex;
     justify-content: center;
-    gap: 15px; /* Espaçamento entre os ícones */
+    gap: 15px;
     margin-top: 35px;
+    opacity: 0; /* Começa invisível */
+    animation: fadeIn 1s forwards 2s; /* Animação de fade-in */
 }
 
 #sociais a img {
     width: 100px;
-    height:auto;
-    transition: transform 0.5s;
+    height: auto;
+    transition: transform 0.5s, filter 0.3s ease; /* Transição de escala e filtro */
 }
 
 #sociais a img:hover {
-    transform: scale(1.2);
+    transform: scale(1.2) rotate(10deg); /* Adiciona rotação junto com a escala */
+    filter: brightness(1.2); /* Efeito de brilho ao passar o mouse */
 }
 
 /* Responsividade */
@@ -72,10 +84,27 @@ body {
 
     #sociais {
         flex-direction: column;
-        gap: 2px;
+        gap: 10px; /* Aumenta o espaço entre os ícones */
     }
 
     #sociais a img {
-        width: 100px;
+        width: 80px; /* Reduz o tamanho dos ícones em dispositivos menores */
     }
+}
+
+/* Animações */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px); /* Começa com deslocamento para baixo */
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0); /* Volta à posição normal */
+    }
+}
+
+/* Efeito de rolagem suave */
+html {
+    scroll-behavior: smooth;
 }
